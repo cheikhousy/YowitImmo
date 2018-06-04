@@ -1,0 +1,68 @@
+<openerp>
+ <data>
+  <record id="tarte_legume" model="cookbook.recipe">
+   <field name="name">Tarte aux légumes</field>
+   <field name="category_id" ref="category_first_course"/>
+   <field name="is_public" eval="False"/>
+   <field name="difficulty">3</field>
+   <field name="cooking_time">20</field>
+   <field name="baking_time">20</field>
+   <field name="ingredients" type="html">
+    <ul>
+     <li>une pâte brisée ;</li>
+     <li>25 cl de lait ;</li>
+     <li>4 œufs ;</li>
+     <li>un choux brocoli ;</li>
+     <li>2 carottes, 2 oignons.</li>
+    </ul>
+   </field>
+   <field name="preparation" type="html">
+    <ol>
+     <li>Nettoyer, éplucher et faire cuire le choux
+      brocoli et les carottes coupées en rondelles
+      dans une casserole d'eau (les légumes doivent
+      rester croquants).</li>
+     <li>Éplucher et émincer les oignons et les faire
+      revenir dans un peu d'huile d'olive.</li>
+     <li>Laisser refroidir les légumes.</li>
+     <li>Mélanger les œufs et le lait, saler, poivrer et
+      ajouter des épices.</li>
+     <li>Étaler la pâte dans un moule à tarte, y
+      disposer les légumes et recouvrir avec l'appareil.</li>
+     <li>Mettre au four préchauffé à 180 oC et laisser
+      cuire environ 20 minutes (vérifier la cuisson avec
+      un couteau).</li>
+     <li>Servir chaud ou froid.</li>
+    </ol>
+   </field>
+  </record>
+  <record id="pain_perdu" model="cookbook.recipe">
+   <field name="name">Pain perdu</field>
+   <field name="category_id" ref="category_main_dish"/>
+   <field name="is_public" eval="True"/>
+   <field name="difficulty">2</field>
+   <field name="cooking_time">5</field>
+   <field name="baking_time">15</field>
+   <field name="ingredients" type="html">
+    <ul>
+     <li>25 cl de lait ;</li>
+     <li>3 œufs ;</li>
+     <li>75 g de sucre de canne ;</li>
+        <li>des grosses tranches de vieux pain ;</li>
+￼    <li>sucre, confitures, miel, chocolat en poudre
+   pour accompagner.</li>
+ </ul>
+</field>
+<field name="preparation" type="html">
+        <ol>
+     <li>Mélanger le lait, les œufs et le sucre de canne.</li>
+     <li>Bien imbiber les tranches de pain dans le mélange.</li>
+     <li>Les faire cuire dans une poêle généreusement beurrée
+      et très chaude.</li>
+     <li>Servir avec un peu de sucre, de confiture, de miel ou
+      de chocolat.</li>
+    </ol>
+   </field>
+  </record>
+ </data>
+</openerp>

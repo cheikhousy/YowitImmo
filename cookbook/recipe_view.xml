@@ -1,0 +1,79 @@
+<openerp>
+ <data>
+  <record id="recipe_action" model="ir.actions.act_window">
+   <field name="name">Recipes</field>
+   <field name="res_model">cookbook.recipe</field>
+   <field name="view_mode">tree,form</field>
+  </record>
+  <record id="category_action" model="ir.actions.act_window">
+   <field name="name">Recipe categories</field>
+   <field name="res_model">cookbook.recipe.category</field>
+   <field name="view_mode">tree,form</field>
+  </record>
+    <record id="recipe_view_tree" model="ir.ui.view">
+ <field name="name">cookbook.recipe.tree</field>
+ <field name="model">cookbook.recipe</field>
+ <field name="arch" type="xml">
+  <tree>
+   <field name="name"/>
+   <field name="category_id"/>
+   <field name="difficulty"/>
+   <field name="cooking_time"/>
+   <field name="baking_time"/>
+   <field name="total_time"/>
+  </tree>
+ </field>
+</record>
+     <record id="recipe_view_form" model="ir.ui.view">
+ <field name="name">cookbook.recipe.form</field>
+ <field name="model">cookbook.recipe</field>
+ <field name="arch" type="xml">
+  <form>
+   <sheet>
+    <label for="name" class="oe_edit_only"/>
+    <h1><field name="name"/></h1>
+    <label for="category_id" class="oe_edit_only"/>
+    <h2><field name="category_id"/></h2>
+    <notebook>
+     <page string="Preparation">
+      <label for="ingredients"/>
+      <field name="ingredients"/>
+     <label for="preparation"/>
+      <field name="preparation"/>
+     </page>
+     <page string="Properties">
+      <group>
+       <group string="Cooking information">
+        <field name="difficulty"/>
+        <field name="cooking_time"/>
+        <field name="baking_time"/>
+        <field name="total_time"/>
+       </group>
+       <group string="Access">
+        <field name="is_public"/>
+       </group>
+      </group>
+     </page>
+    </notebook>
+   </sheet>
+  </form>
+ </field>
+</record>
+
+  <menuitem id="cookbook_menu" name="Cookbook"/>
+  <menuitem id="cookbook_main_menu"
+            name="Recipes"
+            parent="cookbook_menu"/>
+  <menuitem id="cookbook_configuration_menu"
+            name="Configuration"
+            parent="cookbook_menu"/>
+  <menuitem id="cookbook_recipes_menu"
+            name="Recipes"
+            parent="cookbook_main_menu"
+            action="recipe_action"/>
+  <menuitem id="cookbook_categories_menu"
+            name="Categories"
+            parent="cookbook_configuration_menu"
+            action="category_action"/>
+</data>
+</openerp>
